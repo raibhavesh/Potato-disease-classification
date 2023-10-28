@@ -5,7 +5,7 @@ from PIL import ImageOps, Image
 import numpy as np
 
 
-def set_background('./models/images.jpg'):
+def set_background('./images.jpg'):
     """
     This function sets the background of a Streamlit app to an image specified by the given image file.
 
@@ -15,7 +15,7 @@ def set_background('./models/images.jpg'):
     Returns:
         None
     """
-    with open('./models/images.jpg', "rb") as f:
+    with open('./images.jpg', "rb") as f:
         img_data = f.read()
     b64_encoded = base64.b64encode(img_data).decode()
     style = f"""
