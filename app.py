@@ -6,7 +6,7 @@ import numpy as np
 from util import classify, set_background
 
 
-set_background('./bgs/bg5.png')
+set_background('./images.jpg')
 
 # set title
 st.title('Potato Disease Classification')
@@ -18,10 +18,10 @@ st.header('Please upload a Potato Leaf image')
 file = st.file_uploader('', type=['jpeg', 'jpg', 'png'])
 
 # load classifier
-model = load_model('./models/potatoes.h5')
+model = load_model('./potatoes.h5')
 
 # load class names
-with open('./models/1/variables/variables.index', 'r') as f:
+with open('./variables.index', 'r') as f:
     class_names = [a[:-1].split(' ')[1] for a in f.readlines()]
     f.close()
 
